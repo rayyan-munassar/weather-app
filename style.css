@@ -1,0 +1,112 @@
+/* styles */
+/* #622074 primary #622074  */
+/* #dbf5ef secondary #0c2c25 */
+/* #746220 Accent #d2b85b */
+/* #09201b text #ebfaf6 */
+/* #ebfaf6 Background #09201b */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  background-color: #ebfaf6;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #09201b;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.icon {
+  width: 60px;
+  margin-right: 1rem;
+}
+
+.btn {
+  background-color: #622074;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #8c2db3;
+}
+.btn:active {
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  color: #622074;
+  background-color: white;
+}
+
+input {
+  padding: 0.3rem;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.weather-info {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 2rem;
+}
+
+.weather-info > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.weather-info > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Night mode */
+.body.night {
+  background-color: #0c1445;
+}
+
+/* Basic animation  */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.icon {
+  animation-fill-mode: both;
+}
+
+.fade-out {
+  animation-name: fadeOut;
+  animation-duration: 0.3s;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+}
